@@ -8,6 +8,8 @@ namespace Player
 	class PlayerView
 	{
 	private:
+		PlayerController* player_controller;
+
 		sf::RenderWindow* game_window;
 		UI::UIElement::ImageView* player_image;
 
@@ -25,7 +27,7 @@ namespace Player
 		void updatePlayerPosition();
 
 	public:
-		PlayerView();
+		PlayerView(PlayerController*);
 		~PlayerView();
 
 		void initialize();

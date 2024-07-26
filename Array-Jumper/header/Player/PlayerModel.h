@@ -18,6 +18,8 @@ namespace Player
 		PlayerModel();
 		~PlayerModel();
 
+		void initialize();
+
 		int getCurrentPosition();
 		void setCurrentPosition(int new_position);
 

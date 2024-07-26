@@ -1,5 +1,18 @@
 #include "../../header/Player/PlayerModel.h"
 
+Player::PlayerModel::PlayerModel()
+{
+}
+
+Player::PlayerModel::~PlayerModel()
+{
+}
+
+void Player::PlayerModel::initialize()
+{
+	player_state = PlayerState::ALIVE;
+}
+
 int Player::PlayerModel::getCurrentPosition()
 {
 	return current_position;
