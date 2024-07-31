@@ -17,7 +17,6 @@ namespace Level
 
 		UI::UIElement::ImageView* box_image;
 
-		UI::UIElement::ImageView* target_overlay_image;
 		UI::UIElement::ImageView* letter_one_overlay_image;
 		UI::UIElement::ImageView* letter_two_overlay_image;
 		UI::UIElement::ImageView* letter_three_overlay_image;
@@ -33,6 +32,9 @@ namespace Level
 		void drawBoxValue(sf::Vector2f position, BlockType box_value);
 		void drawLevel();
 		void calculateBoxDimensions();
+		void calculateBoxWidthHeight();
+		void calculateBoxSpacing();
+		sf::Vector2f calculateBoxPosition(int index);
 		void deleteImages();
 
 	public:
@@ -40,6 +42,7 @@ namespace Level
 		~LevelView();
 
 		UI::UIElement::ImageView* getBoxOverlayImage(BlockType block_type);
+		BoxDimensions getBoxDimensions();
 
 		void initialize();
 		void update();

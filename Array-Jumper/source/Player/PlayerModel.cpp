@@ -2,6 +2,7 @@
 
 Player::PlayerModel::PlayerModel()
 {
+	
 }
 
 Player::PlayerModel::~PlayerModel()
@@ -10,6 +11,7 @@ Player::PlayerModel::~PlayerModel()
 
 void Player::PlayerModel::initialize()
 {
+	current_position = 0;
 	player_state = PlayerState::ALIVE;
 }
 

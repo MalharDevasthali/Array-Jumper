@@ -1,10 +1,11 @@
 #pragma once
 #include "../../header/UI/UIElement/ImageView.h"
+#include "../Level/LevelModel.h"
 
 namespace Player
 {
 	class PlayerController;
-
+	
 	class PlayerView
 	{
 	private:
@@ -15,6 +16,7 @@ namespace Player
 
 		float player_height;
 		float player_width;
+		Level::BoxDimensions current_box_dimensions;
 
 
 	private:

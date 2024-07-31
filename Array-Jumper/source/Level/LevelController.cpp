@@ -31,3 +31,8 @@ Level::BlockType Level::LevelController::getCurrentBoxValue(int index)
 {
 	return level_model->getCurrentBoxValue(index);
 }
+
+Level::BoxDimensions Level::LevelController::getBoxDimensions()
+{
+	return level_view->getBoxDimensions();
+}
