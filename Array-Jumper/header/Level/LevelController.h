@@ -3,6 +3,8 @@ namespace Level
 {
 	class LevelView;
 	class LevelModel;
+	enum  BlockType;
+
 	class LevelController
 	{
 	private:
@@ -17,5 +19,6 @@ namespace Level
 		void update();
 		void render();
 
+		BlockType getCurrentBoxValue(int);
 	};
 }

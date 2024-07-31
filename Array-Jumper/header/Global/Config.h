@@ -17,6 +17,7 @@ namespace Global
         static const sf::String menu_button_texture_path;
         static const sf::String obstacle_01_texture_path;
         static const sf::String obstacle_02_texture_path;
+        static const sf::String target_texture_path;
         static const sf::String outscal_logo_texture_path;
         static const sf::String play_button_texture_path;
         static const sf::String quit_button_texture_path;

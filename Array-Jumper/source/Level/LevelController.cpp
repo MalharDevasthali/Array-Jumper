@@ -26,3 +26,8 @@ void Level::LevelController::render()
 {
 	level_view->render();
 }
+
+Level::BlockType Level::LevelController::getCurrentBoxValue(int index)
+{
+	return level_model->getCurrentBoxValue(index);
+}

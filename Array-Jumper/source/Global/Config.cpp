@@ -13,6 +13,7 @@ namespace Global
     const sf::String Config::menu_button_texture_path = "assets/textures/menu_button.png";
     const sf::String Config::obstacle_01_texture_path = "assets/textures/obstacle_01.png";
     const sf::String Config::obstacle_02_texture_path = "assets/textures/obstacle_02.png";
+    const sf::String Config::target_texture_path = "";
     const sf::String Config::outscal_logo_texture_path = "assets/textures/outscal_logo.png";
     const sf::String Config::play_button_texture_path = "assets/textures/play_button.png";
     const sf::String Config::quit_button_texture_path = "assets/textures/quit_button.png";
