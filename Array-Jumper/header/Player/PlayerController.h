@@ -17,7 +17,10 @@ namespace Player
 
 		void move(MovementDirection direction);
 		void jump(MovementDirection direction);
+	
+		
 		void readInput();
+		
 		bool isPositionInBound(int targetPosition);
 		void destroy();
 
@@ -29,6 +32,7 @@ namespace Player
 		void update();
 		void render();
 
+		void takeDamage();
 		PlayerState getPlayerState();
 		void setPlayerState(PlayerState new_player_state);
 		int getCurrentPosition();

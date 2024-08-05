@@ -15,6 +15,14 @@ void Player::PlayerModel::initialize()
 	player_state = PlayerState::ALIVE;
 }
 
+
+void Player::PlayerModel::resetPlayer()
+{
+	current_position = 0;
+	player_state = PlayerState::ALIVE;
+}
+
+
 int Player::PlayerModel::getCurrentPosition()
 {
 	return current_position;

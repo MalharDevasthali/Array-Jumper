@@ -14,11 +14,14 @@ namespace Player
 		int current_position;
 		PlayerState player_state;
 
+		
+
 	public:
 		PlayerModel();
 		~PlayerModel();
 
 		void initialize();
+		void resetPlayer();
 
 		int getCurrentPosition();
 		void setCurrentPosition(int new_position);
