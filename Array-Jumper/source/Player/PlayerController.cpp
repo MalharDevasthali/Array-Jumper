@@ -110,6 +110,11 @@ namespace Player
 		player_model->resetPlayer();
 	}
 
+	void PlayerController::levelComplete()
+	{
+		player_model->resetPlayer();
+	}
+
 	void PlayerController::readInput()
 	{
 		if (event_service->pressedRightArrowKey() || event_service->pressedDKey())

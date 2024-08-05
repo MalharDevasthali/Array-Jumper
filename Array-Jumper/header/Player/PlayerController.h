@@ -33,6 +33,7 @@ namespace Player
 		void render();
 
 		void takeDamage();
+		void levelComplete();
 		PlayerState getPlayerState();
 		void setPlayerState(PlayerState new_player_state);
 		int getCurrentPosition();
