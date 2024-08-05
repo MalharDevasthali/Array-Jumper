@@ -50,6 +50,17 @@ namespace Player
 		return player_model->getCurrentPosition();
 	}
 
+	int PlayerController::getCurrentLives()
+	{
+		return player_model->getCurrentLives();
+	}
+
+	void PlayerController::OnDeath()
+	{
+		ServiceLocator::getInstance()->getGameplayService()->OnDeath();
+		player_model->resetPlayer();
+	}
+
 	void PlayerController::move(MovementDirection direction)
 	{
 		int steps, targetPosition;
@@ -107,7 +118,12 @@ namespace Player
 
 	void PlayerController::takeDamage()
 	{
-		player_model->resetPlayer();
+	
+		player_model->decrementLife();
+		if (player_model->getCurrentLives() <= 0)
+			OnDeath();
+		else
+			player_model->resetPosition();
 	}
 
 	void PlayerController::levelComplete()

@@ -9,6 +9,8 @@ namespace Gameplay
 	private:
 		bool isObstacle(Level::BlockType value);
 		bool isEndBlock(Level::BlockType value);
+
+		
 	public:
 		GameplayController();
 		~GameplayController();
@@ -20,6 +22,6 @@ namespace Gameplay
 		void processObstacle();
 		void processEndBlock();
 		void onPositionChanged(int position);
-
+		void OnDeath();
 	};
 }

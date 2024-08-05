@@ -22,6 +22,7 @@ namespace Level
 		UI::UIElement::ImageView* letter_three_overlay_image;
 		UI::UIElement::ImageView* obstacle_one_overlay_image;
 		UI::UIElement::ImageView* obstacle_two_overlay_image;
+		UI::UIElement::ImageView* target_image;
 
 		BoxDimensions box_dimensions;
 

@@ -48,6 +48,8 @@ namespace Level
 		letter_three_overlay_image = new ImageView();
 		obstacle_one_overlay_image = new ImageView();
 		obstacle_two_overlay_image = new ImageView();
+		target_image = new ImageView();
+
 	}
 
 	void LevelView::initializeImages()
@@ -62,6 +64,7 @@ namespace Level
 		letter_three_overlay_image->initialize(Config::letter_three_texture_path, box_dimensions.box_width, box_dimensions.box_height, sf::Vector2f(0, 0));
 		obstacle_one_overlay_image->initialize(Config::obstacle_01_texture_path, box_dimensions.box_width, box_dimensions.box_height, sf::Vector2f(0, 0));
 		obstacle_two_overlay_image->initialize(Config::obstacle_02_texture_path, box_dimensions.box_width, box_dimensions.box_height, sf::Vector2f(0, 0));
+		target_image->initialize(Config::target_texture_path, box_dimensions.box_width, box_dimensions.box_height, sf::Vector2f(0, 0));
 	}
 
 	void LevelView::updateImages()
@@ -75,6 +78,7 @@ namespace Level
 		letter_three_overlay_image->update();
 		obstacle_one_overlay_image->update();
 		obstacle_two_overlay_image->update();
+		target_image->update();
 	}
 
 	void LevelView::drawLevel()
@@ -154,6 +158,7 @@ namespace Level
 		delete(letter_three_overlay_image);
 		delete(obstacle_one_overlay_image);
 		delete(obstacle_two_overlay_image);
+		delete(target_image);
 	}
 
 	ImageView* LevelView::getBoxOverlayImage(BlockType block_type)
@@ -175,7 +180,7 @@ namespace Level
 		case BlockType::THREE:
 			return letter_three_overlay_image;
 		case BlockType::TARGET:
-			return letter_three_overlay_image;
+			return target_image;
 		}
 		return nullptr;
 	}

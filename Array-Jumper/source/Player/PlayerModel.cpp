@@ -11,8 +11,7 @@ Player::PlayerModel::~PlayerModel()
 
 void Player::PlayerModel::initialize()
 {
-	current_position = 0;
-	player_state = PlayerState::ALIVE;
+	resetPlayer();
 }
 
 
@@ -20,6 +19,7 @@ void Player::PlayerModel::resetPlayer()
 {
 	current_position = 0;
 	player_state = PlayerState::ALIVE;
+	current_lives = max_lives;
 }
 
 
@@ -33,6 +33,11 @@ void Player::PlayerModel::setCurrentPosition(int new_position)
 	current_position = new_position;
 }
 
+void Player::PlayerModel::resetPosition()
+{
+	current_position = 0;
+}
+
 Player::PlayerState Player::PlayerModel::getPlayerState()
 {
 	return player_state;
@@ -41,4 +46,14 @@ Player::PlayerState Player::PlayerModel::getPlayerState()
 void Player::PlayerModel::setPlayerState(PlayerState new_player_state)
 {
 	player_state = new_player_state;
+}
+
+int Player::PlayerModel::getCurrentLives()
+{
+	return current_lives;
+}
+
+void Player::PlayerModel::decrementLife()
+{
+	current_lives--;
 }
