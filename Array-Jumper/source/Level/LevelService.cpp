@@ -36,6 +36,21 @@ namespace Level
 		return level_controller->getCurrentBoxValue(currentPosition);
 	}
 
+	void LevelService::loadNextLevel()
+	{
+		level_controller->loadNextLevel();
+	}
+
+	bool LevelService::isLastLevel()
+	{
+		return level_controller->isLastLevel();
+	}
+
+	void LevelService::reset()
+	{
+		level_controller->reset();
+	}
+
 	void LevelService::destroy()
 	{
 		delete(level_controller);

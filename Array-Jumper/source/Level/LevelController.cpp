@@ -36,3 +36,18 @@ Level::BoxDimensions Level::LevelController::getBoxDimensions()
 {
 	return level_view->getBoxDimensions();
 }
+
+void Level::LevelController::loadNextLevel()
+{
+	level_model->loadNextLevel();
+}
+
+bool Level::LevelController::isLastLevel()
+{
+	return level_model->isLastLevel();
+}
+
+void Level::LevelController::reset()
+{
+	level_model->reset();
+}

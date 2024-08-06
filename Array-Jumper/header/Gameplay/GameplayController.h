@@ -9,6 +9,8 @@ namespace Gameplay
 	private:
 		bool isObstacle(Level::BlockType value);
 		bool isEndBlock(Level::BlockType value);
+		bool isLastLevel();
+		void loadNextLevel();
 
 		
 	public:
@@ -23,5 +25,6 @@ namespace Gameplay
 		void processEndBlock();
 		void onPositionChanged(int position);
 		void OnDeath();
+		void gameWon();
 	};
 }
